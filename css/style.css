@@ -1,3 +1,32 @@
-body {
-  background-color: aquamarine;
-}
+ :root {
+   --primary-color: #2692A6;
+   --secondary-color: #EF641A;
+   --text-shadow: 0.5px 0.5px 1px rgb(131, 57, 14), 0 0 0.5em rgb(216, 149, 134), 0 0 0.1em rgb(90, 25, 7);
+   --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+   --bs-border-radius: 10px;
+ }
+
+
+ body {
+   background: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+ }
+
+ h1,
+ footer {
+   text-align: center;
+ }
+
+ .logo-navbar {
+   max-height: 18px;
+   margin-bottom: -3px;
+   text-decoration: none;
+ }
+
+ .footer {
+   text-decoration: none;
+   color: rgb(50, 50, 51);
+ }
+
+ .footer:hover {
+   color: var(--secondary-color);
+ }
