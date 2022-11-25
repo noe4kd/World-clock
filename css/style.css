@@ -1,5 +1,5 @@
  :root {
-   --primary-color: #2692A6;
+   --primary-color: #2692a6;
    --secondary-color: #EF641A;
    --text-shadow: 0.5px 0.5px 1px rgb(131, 57, 14), 0 0 0.5em rgb(216, 149, 134), 0 0 0.1em rgb(90, 25, 7);
    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -11,9 +11,60 @@
    background: linear-gradient(-90deg, #e9defa 0%, #fbfcdb 100%);
  }
 
+ .container {
+   max-width: 550px;
+   margin: 40px auto;
+   background: rgb(255, 253, 244);
+   padding: 30px;
+   box-shadow: var(--box-shadow);
+   border-radius: var(--bs-border-radius);
+ }
+
+ select {
+   display: block;
+   width: 100%;
+   border-radius: var(--bs-border-radius);
+   padding: 5px;
+ }
+
+ .city {
+   display: flex;
+   margin: 20px 0;
+   justify-content: space-between;
+   padding: 20px 0;
+   border-bottom: 0.5px dotted rgba(0, 0, 0, 0.2);
+ }
+
+ .city:last-child {
+   border: none;
+ }
+
+ h2 {
+   font-size: 24px;
+   margin: 0 0 5px;
+ }
+
+ .date {
+   opacity: 0.8;
+   font-size: 15px;
+ }
+
+ .time {
+   font-size: 36px;
+   font-weight: bold;
+ }
+
+ .time small {
+   font-size: 15px;
+   vertical-align: middle;
+   line-height: 36px;
+ }
+
  h1,
  footer {
    text-align: center;
+   margin-top: -10px;
+   color: rgba(0, 0, 0, 0.7);
  }
 
  .logo-navbar {
@@ -24,7 +75,7 @@
 
  .footer {
    text-decoration: none;
-   color: rgb(50, 50, 51);
+   color: rgba(38, 146, 166, 0.6);
  }
 
  .footer:hover {
