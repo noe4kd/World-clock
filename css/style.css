@@ -1,23 +1,39 @@
  :root {
    --primary-color: #2692a6;
    --secondary-color: #EF641A;
-   --text-shadow: 0.5px 0.5px 1px rgb(131, 57, 14), 0 0 0.5em rgb(216, 149, 134), 0 0 0.1em rgb(90, 25, 7);
+   --text-shadow: 1px 3px 2px rgb(11, 2, 58), 0 0 0.4em rgb(64, 68, 119), 0 0 0.1em rgb(2, 14, 139);
    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
    --bs-border-radius: 10px;
  }
 
 
  body {
-   background: linear-gradient(-90deg, #e9defa 0%, #fbfcdb 100%);
+   background: linear-gradient(-90deg, #dcdece 1%, #fcfce9 99%);
  }
 
  .container {
    max-width: 550px;
    margin: 40px auto;
-   background: rgb(255, 253, 244);
+   background: linear-gradient(-45deg, #ddfcd2 35%, #cae4fc 75%);
    padding: 30px;
    box-shadow: var(--box-shadow);
    border-radius: var(--bs-border-radius);
+   animation: color 13s linear infinite;
+   background-size: 250%;
+ }
+
+ @keyframes color {
+   0% {
+     background-position: 0 50%;
+   }
+
+   50% {
+     background-position: 100% 50%;
+   }
+
+   100% {
+     background-position: 0 50%;
+   }
  }
 
  select {
@@ -62,12 +78,13 @@
 
  h1 {
    margin-bottom: 10px;
+   text-shadow: var(--text-shadow);
  }
 
  h1 img {
-   max-width: 30px;
+   max-width: 50px;
    margin-bottom: 8px;
-   margin-left: 5px;
+
  }
 
  h1 .title {
@@ -95,8 +112,26 @@
  .footer {
    text-decoration: none;
    color: rgba(38, 146, 166, 0.6);
+   transition: all 200ms ease-in-out;
  }
 
  .footer:hover {
    color: var(--secondary-color);
+ }
+
+ @media(max-width:400px) {
+   .time {
+     font-size: 26px;
+     font-weight: bold;
+   }
+
+   .date {
+     opacity: 0.8;
+     font-size: 10px;
+   }
+
+   h2 {
+     font-size: 18px;
+     margin: 0 0 5px;
+   }
  }
