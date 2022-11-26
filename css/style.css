@@ -60,7 +60,26 @@
    line-height: 36px;
  }
 
- h1,
+ h1 {
+   margin-bottom: 10px;
+ }
+
+ h1 img {
+   max-width: 30px;
+   margin-bottom: 8px;
+   margin-left: 5px;
+ }
+
+ h1 .title {
+   text-decoration: none;
+   color: #2692a6;
+   transition: all 200ms ease-in-out;
+ }
+
+ h1 .title:hover {
+   color: #EF641A;
+ }
+
  footer {
    text-align: center;
    margin-top: -10px;
