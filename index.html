@@ -20,27 +20,29 @@
   <div class="container">
     <h1>World clock</h1>
 
-    <select>
+    <select id="city">
       <option value="">Select a city</option>
-      <option value="">Oslo</option>
-      <option value="">Buenos Aires</option>
-      <option value="">Malaysia</option>
+      <option value="Europe/Oslo">Oslo</option>
+      <option value="America/Buenos_Aires">Buenos Aires</option>
+      <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
 
     </select>
 
-    <div class="city" id="oslo">
-      <div>
-        <h2>Oslo 🇳🇴</h2>
-        <div class="date"></div>
+    <div id="cities">
+      <div class="city" id="oslo">
+        <div>
+          <h2>Oslo 🇳🇴</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
       </div>
-      <div class="time"></div>
-    </div>
-    <div class="city" id="buenos-aires">
-      <div>
-        <h2>Buenos Aires 🇦🇷</h2>
-        <div class="date"></div>
+      <div class="city" id="buenos-aires">
+        <div>
+          <h2>Buenos Aires 🇦🇷</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
       </div>
-      <div class="time"></div>
     </div>
   </div>
   <footer>Coded by <a href="https://portfolioproject-noe4kd.netlify.app/">
