@@ -24,6 +24,20 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
+
+  //Qatar
+  let qatarElement = document.querySelector("#qatar");
+  if (qatarElement) {
+    let qatarDateElement = qatarElement.querySelector(".date");
+    let qatarTimeElement = qatarElement.querySelector(".time");
+
+    let qatarTime = moment().tz("Asia/Qatar");
+
+    qatarDateElement.innerHTML = moment().format("MMMM Do YYYY");
+    qatarTimeElement.innerHTML = qatarTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
 }
 
 function updateCity(event) {
@@ -42,10 +56,24 @@ function updateCity(event) {
         <div class="time">${cityTime.format(
           "h:mm:ss"
         )}<small> ${cityTime.format("A")}</small></div>
-      </div>`;
+      </div><a href="/">🧭⏪</a>`;
+}
+function updateCurrent() {
+  let currentTimeElement = document.querySelector("#current-time");
+  let currentTimeZone = moment.tz.quess();
+  let currentTime = moment()
+    .tz(currentTimeZone)
+    .format("H:mm:ss [<small>]a[</small>]");
+
+  currentTimeElement.innerHTML = currentTime;
+
+  currentDateElement = document.querySelector("#current-date");
+  currentDateElement.innerHTML = moment().format("D MMM YY");
 }
 
+updateCurrent();
 updateTime();
+setInterval(updateCurrent, 1000);
 setInterval(updateTime, 1000);
 
 let citiesSelectElement = document.querySelector("#city");

@@ -18,16 +18,16 @@
 
 <body>
   <div class="container">
-    <h1><a href="/" class="title">World clock</a><img src="img/clock.png" /></h1>
+    <h1><a href="/" class="title">World clock</a>
+    </h1>
+    <h3 id="current-time"></h3>
+    <h4 id="current-date"></h4>
 
     <select id="city">
       <option value="">Select a city</option>
       <option value="current">My current location</option>
-      <option value="Europe/Oslo">Oslo</option>
-      <option value="America/Buenos_Aires">Buenos Aires</option>
       <option value="Asia/Kuala_Lumpur">Kuala Lumpur</option>
       <option value="Africa/Cairo">Cairo</option>
-      <option value="Asia/Qatar">Qatar</option>
       <option value="Pacific/Auckland">Auckland</option>
     </select>
 
@@ -42,6 +42,13 @@
       <div class="city" id="buenos-aires">
         <div>
           <h2>Buenos Aires 🇦🇷</h2>
+          <div class="date"></div>
+        </div>
+        <div class="time"></div>
+      </div>
+      <div class="city" id="qatar">
+        <div>
+          <h2>Qatar 🇶🇦</h2>
           <div class="date"></div>
         </div>
         <div class="time"></div>
