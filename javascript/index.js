@@ -67,6 +67,10 @@ function updateCurrent() {
 
   currentTimeElement.innerHTML = currentTime;
 
+  //with this under it works, but when i add the TZ it stops working
+  //currentTimeElement = document.querySelector("#current-time");
+  //currentTimeElement.innerHTML = moment().format("D MMM YY");
+
   currentDateElement = document.querySelector("#current-date");
   currentDateElement.innerHTML = moment().format("D MMM YY");
 }
