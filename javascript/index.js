@@ -64,14 +64,13 @@ function updateCurrent() {
   let currentTime = moment()
     .tz(currentTimeZone)
     .format("H:mm:ss [<small>]a[</small>]");
-
   currentTimeElement.innerHTML = currentTime;
 
   //with this under it works, but when i add the TZ it stops working
   //currentTimeElement = document.querySelector("#current-time");
   //currentTimeElement.innerHTML = moment().format("H:mm:ss [<small>]a[</small>]");
 
-  currentDateElement = document.querySelector("#current-date");
+  let currentDateElement = document.querySelector("#current-date");
   currentDateElement.innerHTML = moment().format("D MMM YY");
 }
 
